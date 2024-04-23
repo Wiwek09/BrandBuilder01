@@ -1,14 +1,7 @@
-"use client";
-import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-
 const pdfBox = ({ pdfData }: { pdfData: any }) => {
-  useEffect(() => {
-    console.log("check", pdfData);
-  });
-
   return (
     <div className="md:px-3 px-1 mt-3 overflow-hidden">
       <Link href={pdfData.link} target="_blank">
@@ -23,7 +16,13 @@ const pdfBox = ({ pdfData }: { pdfData: any }) => {
             />
 
             <div className="absolute flex right-2 bottom-0 justify-end">
-              <Image className="h-full w-full" src={pdfData.icon} alt="pdfimg" height={30} width={30} />
+              <Image
+                className="h-full w-full"
+                src={pdfData.icon}
+                alt="pdfimg"
+                height={30}
+                width={30}
+              />
             </div>
           </div>
         </div>
